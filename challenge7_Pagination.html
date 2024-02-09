@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+  </head>
+  <style>
+    .pagination {
+      margin: 100px auto;
+      border: 5px solid black;
+      width: 60%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      /* grid-template-rows: 1fr; */
+      gap: 50px;
+    }
+    .bt1,
+    .bt2 {
+      font-weight: bold;
+      border-radius: 50%;
+      background-color: white;
+      padding: 10px 15px;
+      /* width: 300px;
+      height: 300px; */
+      display: inline;
+    }
+    .bt {
+      width: 22px;
+      height: 22px;
+    }
+    a {
+      text-decoration: none;
+      border: 2px solid black;
+      border-radius: 50%;
+      padding: 10px 15px;
+    }
+    a:hover,
+    .bt1:hover,
+    .bt2:hover,
+    .highlight {
+      background-color: #087f5b;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="pagination">
+      <button class="bt1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="bt"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+
+      <a href="" class="a1" value="1">1</a>
+      <a href="" class="a2" value="2">2</a>
+      <a href="" class="highlight a3" value="3">3</a>
+      <a href="" class="a4" value="4">4</a>
+      <a href="" class="a5 hidden" value="5">5</a>
+      <a href="" class="a6 hidden" value="6">6</a>
+      <a href="" class="a7 hidden" value="7">7</a>
+      <a href="" class="a8 hidden" value="8">8</a>
+      <a href="" class="a9 hidden" value="9">9</a>
+      <span>...</span>
+      <a href="" class="a10" value="10">10</a>
+      <button class="bt2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="bt"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+  <script>
+    let left = document.querySelector(".bt1");
+    let right = document.querySelector(".bt2");
+
+    let start = 1;
+    let end = 4;
+    left.addEventListener("click", (e) => {
+      document.querySelector(`span`).classList.remove("hidden");
+      if (start !== 1) {
+        document.querySelector(`.a${start - 1}`).classList.remove("hidden");
+        if (end !== 10)
+          document.querySelector(`.a${end}`).classList.add("hidden");
+        start--;
+        end--;
+      }
+    });
+    right.addEventListener("click", (e) => {
+      if (end !== 9) {
+        if (start === 5) {
+          console.log("hello");
+          document.querySelector(`span`).classList.add("hidden");
+        } else document.querySelector(`span`).classList.remove("hidden");
+        document.querySelector(`.a${start}`).classList.add("hidden");
+        document.querySelector(`.a${end + 1}`).classList.remove("hidden");
+        start++;
+        end++;
+      }
+    });
+  </script>
+</html>

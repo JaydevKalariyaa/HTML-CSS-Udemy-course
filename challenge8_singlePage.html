@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr 8fr 3fr;
+        grid-template-rows: 1fr 11fr;
+        height: 100vh;
+      }
+
+      nav {
+        border: 2px solid black;
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        background-color: #343a40;
+        font-size: 24px;
+        font-weight: 500px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+      }
+      .top {
+        border: 2px solid black;
+        grid-column: 2/-1;
+        background-color: #1098ad;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .bt {
+        font-size: 20px;
+        font-weight: 500px;
+        padding: 5px;
+        margin-left: 10px;
+        background-color: #0b7285;
+        color: white;
+        border-radius: 4px;
+      }
+      .bt5 {
+        margin-left: auto;
+        margin-right: 10px;
+        background-color: red;
+      }
+      .first {
+        border: 2px solid black;
+        background-color: #dee2e6;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        overflow-y: scroll;
+      }
+      .second {
+        border: 2px solid black;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500px;
+      }
+      .third {
+        border: 2px solid black;
+        background-color: #dee2e6;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 500px;
+        text-align: center;
+      }
+      .email {
+        padding: 5px;
+        font-size: 24px;
+        font-weight: 500px;
+        color: black;
+        background-color: #868e96;
+        height: 100px;
+        width: 180px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>nav</nav>
+
+      <div class="top">
+        <button class="bt bt1">New</button>
+        <button class="bt bt2">Reply</button>
+        <button class="bt bt3">Forward</button>
+        <button class="bt bt4">Mark Unread</button>
+        <button class="bt bt5">Trash</button>
+      </div>
+
+      <div class="first">
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+        <div class="email">Email</div>
+      </div>
+      <div class="second">Email view</div>
+      <div class="third">Additional info</div>
+    </div>
+  </body>
+</html>
