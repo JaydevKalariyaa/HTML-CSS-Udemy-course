@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge1</title>
+    <style>
+      /* li {
+         list-style: none;
+       } */
+      /* #first {
+         background-color: orange;
+       } */
+      li:nth-child(3) {
+        color: red;
+      }
+      #first {
+        color: red;
+      }
+      #second {
+        color: blue;
+      }
+
+      .cart::after {
+        content: "1";
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        font-size: large;
+        display: inline-block;
+        padding: 0 5px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        /* left: 20px; */
+      }
+      div {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        border: 2px solid black;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart">🛒</div>
+    <h1 id="first">heading</h1>
+    <aside>
+      <ul class="first">
+        <li>
+          hi
+          <img src="images/first.jpg" alt="" />
+          <a href="https://www.google.com/">click here</a>
+        </li>
+        <li>
+          hi <img src="images/second.jpg" alt="" /><a
+            href="https://www.google.com/"
+            >click here</a
+          >
+        </li>
+        <li>
+          hi <img src="images/third.jpg" alt="" /><a
+            href="https://www.google.com/"
+            >clik here</a
+          >
+        </li>
+      </ul>
+      <ul class="first">
+        <li>
+          hi
+          <img src="images/first.jpg" alt="" />
+          <a href="https://www.google.com/">click here</a>
+        </li>
+        <li>
+          hi <img src="images/second.jpg" alt="" /><a
+            href="https://www.google.com/"
+            >click here</a
+          >
+        </li>
+        <li>
+          hi <img src="images/third.jpg" alt="" /><a
+            href="https://www.google.com/"
+            >clik here</a
+          >
+        </li>
+      </ul>
+    </aside>
+  </body>
+</html>
